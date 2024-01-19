@@ -2,9 +2,10 @@ from azure.cognitiveservices.vision.computervision import ComputerVisionClient
 from msrest.authentication import CognitiveServicesCredentials
 from azure.cognitiveservices.vision.computervision.models import OperationStatusCodes
 import time
+import config
 
-endpoint = "https://mlp-lab1-computervisionapi.cognitiveservices.azure.com/"
-key = "c5763bb0c27a4b65ac990213768f1d76"
+endpoint = config.endpoint
+key = config.key
 
 credentials = CognitiveServicesCredentials(key)
 
