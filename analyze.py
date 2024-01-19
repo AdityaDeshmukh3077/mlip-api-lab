@@ -1,15 +1,10 @@
 from azure.cognitiveservices.vision.computervision import ComputerVisionClient
 from msrest.authentication import CognitiveServicesCredentials
 from azure.cognitiveservices.vision.computervision.models import OperationStatusCodes
-import ConfigParser
 import time
 
-configParser = ConfigParser.RawConfigParser()   
-configFilePath = r'config.txt'
-configParser.read_file(open(configFilePath))
-
-endpoint = configParser.get("endpoint")
-key = configParser.get("key")
+endpoint = "https://mlp-lab1-computervisionapi.cognitiveservices.azure.com/"
+key = "c5763bb0c27a4b65ac990213768f1d76"
 
 credentials = CognitiveServicesCredentials(key)
 
